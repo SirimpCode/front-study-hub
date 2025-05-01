@@ -1,0 +1,99 @@
+div#container {
+ border : solid 0px red;
+ width: 80%;
+ margin: 5% auto 0 auto;
+ display:flex;
+ align-items: center;
+ justify-content: center;
+}
+div#container > form {
+    border: solid 0px blue;
+    width: 70%;
+}
+div#container > form > fieldset > legend{
+    background-color: black;
+    color: white;
+    font-size: 17pt;
+    padding: 0.5% 1%;
+    margin: 0 3%;
+}
+div#container > form > fieldset > ul{
+    border: solid 0px gray;
+    list-style-type: none;
+    padding: 0 0 0 2%;
+}
+div#container > form > fieldset > ul > li{
+    border: solid 0px red;
+    line-height: 300%;
+}
+div#container > form > fieldset > ul > li > label{
+    border: solid 0px green;
+    display: inline-block;
+    width: 30%;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+div#container > form > fieldset > ul > li > input{
+    height: 20px;
+}
+/* 뒤에서 두번째 자식의 input태그 */
+div#container > form > fieldset > ul > li:nth-last-child(2) > input{
+    border: solid 0px blue;
+    width: 60%;
+    height: 30px;
+}
+/* 막내 자식 */
+div#container > form > fieldset > ul > li:last-child > input{
+    width: 80px;
+    height: 35px;
+    color: white;
+    font-size: 13pt;
+    margin: 5% 3% 0 0 ;
+    padding: 1%;
+    border: none;
+    background-color: gray;
+} 
+div#container > form > fieldset > ul > li:last-child > input[type="submit"]{
+    background-color: navy;
+}
+div#container > form > fieldset > ul > li:last-child > input[type="reset"]{
+    background-color: red;
+}
+
+div#container > form > fieldset > ul > li:last-child > input:hover{
+    cursor: pointer;
+}
+
+div#container > form > fieldset > ul > li > label:hover{
+    cursor: pointer; /* 마우스 커서가 손가락 모양으로 바뀌게 하겠다. */
+}
+
+
+
+
+
+
+
+
+
+/* 혼자만들기기 */
+div#container2 {
+    border : solid 1px red;
+    width: 80%;
+    margin: 5% auto 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   }
+div#container2 > form {
+    border: solid 1px blue;
+    width: 70%;
+}
+div#container2 > form > fieldset > legend{
+    background-color: black;
+    color: white;
+    font-size: 17pt;
+    padding: 0.5% 1%;
+    margin: 0 3%;
+}

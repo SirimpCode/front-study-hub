@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 에 대해서 알아봅니당 -1</title>
+    <link rel="stylesheet" href="css/01_form.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- form 태그는 데이터 전송시 사용되는 태그다.-->
+      <form>
+        <!-- fieldset 태그는 폼에 입력되어지는 정보들을 그룹핑(묶어주는) 역할-->
+        <fieldset>
+          <!-- legend 태그는 fieldset 태그의 제목을 나타내는 역할-->
+          <legend>프로젝트 정보</legend>
+          <ul>
+            <li>
+              <label for="prjname"> 프로젝트명 </label>
+              <input id="prjname" type="text"  maxlength="25" size="21" placeholder="예: 인사관리프로젝트" autofocus required/>
+              <!-- autofocus : 페이지 로드시 자동 포커스 지정 
+                  placeholder : 입력창 안에 예시를 보여줌
+                  maxlength 최대길이-->
+            </li>
+            <li>
+              <label > 중요도 </label>
+              <input
+                type="range"
+                min="1"
+                max="10"
+                value="5"
+                step="1"
+              />
+            </li>
+            <li>
+              <label >완료예상시간 </label>
+              <input type="number" min="1" max="100" value="10" step="1" /><!--number : 숫자만 입력가능-->
+            <!-- 1부터 100까지 초기값 10 1씩증가 10쓰면 클릭할때 10씩증가됨-->
+              <!-- <select name="time" id="time" >
+                <option value="1">1시간</option>
+                <option value="2">2시간</option>
+                <option value="3">3시간</option>
+                <option value="4">4시간</option>
+                <option value="5">5시간</option> -->
+            </li>
+            <li>
+                <label>
+                    시작날짜
+                </label>
+                <input type="date">
+            </li>
+            <li>
+                <label>
+                    월
+                </label><!--월단위태그-->
+                <input type="month">
+            </li>
+            <li>
+                <label>
+                    주
+                </label><!--주단위태그-->
+                <input type="week">
+            </li>
+            <li>
+                <label>
+                    시간
+                </label><!--시간단위태그-->
+                <input type="time">
+            </li>
+            <li>
+                <label for="email">
+                    이메일
+                </label><!--이메일 태그-->
+                <input id="email" type="email" placeholder="이메일을 입력하세요.">
+            </li>
+            <li>
+                <label for="url">
+                    URL
+                </label><!--URL태그-->
+                <input id="url" type="url" required placeholder="https://www.naver.com">
+            </li>
+            <li>
+                <label for="search">
+                    검색어
+                </label><!--검색어 태그-->
+                <input id="search" type="search" placeholder="검색어를 입력하세요.">
+            </li>
+            <li>
+                <label for="color">
+                    색상
+                </label><!--색상 선택 태그 value는 초기값-->
+                <input id="color" type="color" value="#ff0000" />
+            </li>
+            <li>
+                <label for="tel">
+                    전화번호
+                </label><!--전화번호 태그-->
+                <input id="tel" type="tel" placeholder="전화번호를 입력하세요.">
+            </li>
+            <li>
+                <label for="file">
+                    파일
+                </label><!--파일 태그-->
+                <input id="file" type="file" accept=".jpg, .png, .gif" />
+                <!-- accept : 확장자 지정 가능 -->
+                <!-- accept=".jpg, .png, .gif" : jpg, png, gif 확장자만 가능 -->
+            </li>
+            <li>
+                <input type="submit" value="전송" />
+                <input type="reset" value="초기화" />
+                <input type="button" value="취소" onclick="history.back()" />
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </div>
+    <div id="container2">
+      <form>
+        <fieldset>
+          <legend>프로젝트 정보</legend>
+          <label for="id">프로젝트명</label>
+          <input
+            type="text"
+            id="id"
+            name="id"
+            placeholder="아이디를 입력하세요."
+          /><br /><br />
+          <label for="">중요도</label>
+          <input type="range" min="1" max="100" value="50" step="1" />
+          <label for="pw">비밀번호</label>
+          <input
+            type="password"
+            id="pw"
+            name="pw"
+            placeholder="비밀번호를 입력하세요."
+          /><br /><br />
+          <label for="name">이름</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="이름을 입력하세요."
+          /><br /><br />
+          <label for="email">이메일</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="이메일을 입력하세요."
+          /><br /><br />
+          <input type="submit" value="가입하기" />
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

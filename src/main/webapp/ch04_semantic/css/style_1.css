@@ -1,0 +1,27 @@
+/*기본적인 폰트 설정하기  *은 모든 태그를 의미함 */
+* {
+    font-family: Arial, 'MS Trebuchet', sans-serif;
+}
+body {
+    border: solid 1px gray;
+    word-break: break-all; /*문자가 정해진크기로 벗어나지 않도록함*/
+}
+
+
+header#page_header > div > ul {
+    border: solid 0px gray;
+    list-style-type: none;
+    margin-bottom: 10%;
+}
+header#page_header > div > ul > li {
+    display: inline-block;
+    border: solid 1px red;
+    width: 15%;
+    height: 30px;
+    margin: 0 5% 0 0;
+    text-align: center;
+    background-color
+    : #999;
+    font-weight: bold;
+    font-size: 16pt;
+}

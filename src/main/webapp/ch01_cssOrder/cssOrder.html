@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS(Cascading Stryle Sheet)의 우선순위</title>
+<link rel="stylesheet" href="mycss.css"> <!-- 외부 CSS 파일을 로드하는 방법 -->
+<style>
+    /* 주석문 */
+    div {
+        border: dashed 1px blue; /* div의 테두리 색상 */
+        background-color: #ccffff; /* div의 배경색 */
+        justify-content: right ;
+    }
+    #mine1 {/*얘가 class지정보다 우선순위가 높음*/
+        border: solid 2px green; /* id가 mine1인 div의 테두리 색상 */
+        background-color: azure; /* id가 mine1인 div의 배경색 */
+    }
+    .mineClass {
+        border: dotted 2px orange; /* class가 mineClass인 div의 테두리 색상 */
+        background-color: #ffccff; /* class가 mineClass인 div의 배경색 */
+    }
+    #mine2 {
+        border: solid 2px purple; /* id가 mine2인 div의 테두리 색상 */
+        background-color: #ccffcc; /* id가 mine2인 div의 배경색 */
+    }
+</style>
+</head>
+<!-- CSS 의 우선순위 
+    !important(css 강제적용) > 해당 태그에 직적ㅂ준것 (인라인방식) > HTML 파일에서 준 style 태그(임베디드방식) > 외부에 있는 .css 파일을 로드 한것 (external 방식)
+    extanal 방식 예시 :=> <link rel="stylesheet" href="mycss.css"> -->
+<body>
+     <!-- /*인라인이 위에보다 높음*/ -->
+    <div style="border: inset 2px red; background-color: #ffffcc;">나는 div1</div>
+    <div>나는 div2</div>
+    <div class="mineClass">나는 div3</div>
+    <div id="mine1" style="border-radius: 50%; font-size: 20px;">나는 div4</div>
+    <div id="mine2">나는 div</div>
+    <div class="mineClass" id="mine1" style="background-color: #000000;">나는 div5</div>
+    <div>
+        <button id="btn1">버튼</button>
+        <button id="btn2">버튼</button>
+        <button id="btn3">버튼</button>
+        <button id="btn4">버튼</button>
+    </div>
+</body>
+</html>

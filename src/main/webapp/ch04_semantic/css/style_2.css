@@ -1,0 +1,167 @@
+*{
+    font-family: Arial, "MS Trebuchet", sans-serif;
+}
+body{
+    border: solid 0px gray;
+    word-break: break-all; /*문자가 정해진크기로 벗어나지 않도록함*/
+    margin: 0;
+    padding: 0;
+}
+body > div#wrap {
+    border: solid 0px blue;
+    width: 70%;
+    margin: 0 auto; /* 좌우 여백을 자동으로 설정하겠다. */
+}
+
+header#page_header > nav > ul,
+footer > nav > ul,
+section#sidebar > nav > ul  {/*, 를 사용해서 두개도 잡을수 있음*/
+    border: solid 0px red;
+    list-style-type: none;
+    padding: 0;
+    font-size: 16pt;
+}
+section#sidebar > nav > ul{
+    line-height: 200%;
+    padding-left: 10%;
+    margin-top: -5%;
+}
+section#sidebar > nav > ul > li > ul{
+    line-height: 120%;
+    margin-bottom: 10px;
+}
+
+header#page_header > nav > ul > li{
+    display: inline-block;
+    border: solid 0px red;
+    width: 15%;
+    margin : 0 2% 0 0;
+    
+}
+footer > nav > ul > li {
+    display: inline-block;
+    border: solid 0px red;
+    width: 12%;
+    margin : 0 2% 0 0;
+    font-size: 12pt;
+    
+}
+header#page_header > hr {
+    border: solid 2px blue;
+    margin-top: 2%;
+}
+/* section {
+    height: 500px;
+} */
+
+section#posts {
+    border: solid 0px red;
+    float: left;
+    /* margin-right: 20px; */
+    width: 72%;
+}
+section#sidebar {
+    border: solid 0px gray;
+    float: right;
+    width: 24%;
+}
+footer#page_footer > p{
+    font-size: 20pt;
+}
+footer#page_footer {
+    border: solid 0px green;
+    clear: both; /* float 속성을 해제하겠다. */
+    background-color: #eee;;
+    /* height: 50px;  */
+    text-align: center;
+    font-size: 12pt;
+    padding-top: 10px;
+    margin-bottom: 5%;
+    padding: 1.8% 0;
+}
+/*a 태그의 밑줄 제거하기*/
+a{
+    text-decoration: none; /* 밑줄을 없애겠다. underline 기본값, overline 위에나옴, line-through 가운데그어버림*/
+}
+/* a 태그의 색상 설정하기*/
+a:link { /* 방문하지 않은 링크의 색상 설정하기 */
+    color: black; /* 검은색 */
+}
+a:visited { /* 방문한 링크의 색상 설정하기 */
+    color: #999999; /* 회색 */
+}
+
+a:hover { /* 마우스가 링크 위에 올라갔을 때 색상 설정하기 */
+    color: blue; /* 파란색 */
+    background-color: yellow;
+    font-weight: bold;
+    transition: color 0.5s; /* 색상이 바뀌는 속도 설정하기 */
+}
+a:active { /* 링크를 클릭했을 때 색상 설정하기 */
+    color: green; /* 초록색 */
+}
+/* a 태그의 색상 설정하기 끝 */
+section#sidebar > nav > ul > li a:hover{
+    
+    color: gray;
+    background-color: transparent;
+    font-weight: bold;
+    transition: color 0.5s;
+}
+p {
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+/**/
+p:hover {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+#container {
+    border: solid 1px navy;
+    font-size:  20pt;
+    text-align: center;
+
+    width: 50%;
+    /* 상하는 2%; 우좌는 남은 20%에서 좌우로 1/2씩 균등하게 주겠다. 즉, 화면의 가운데로 위치하겠다는 말이다. */
+    margin: 5% auto; /* 좌우 여백을 자동으로 설정하겠다. */
+}
+/* body > div#wrap > section#posts 태그(엘리먼트, 요소)속에 있는 자식을 포함한 모든 자손태그들 중 aside 태그(엘리먼트, 요소)를 가리키는 것이다. */
+section#posts aside {
+    border: solid 0px gray;
+    float: right;
+    width: 45%;
+    font-size: 18pt;
+    color: #b30059;
+    line-height: 180%;/*줄간격 100% 하면 글자크기만큼만 벌어지고 줄간격이 엄슴 200퍼 하면 글자크기만큼 벌어짐 180% = 1.8 과 같은것이다.*/
+    padding-left:  3%;
+    text-align: center;
+    margin-top: -7%;
+    
+}
+/* 줄간격 180%는 글자높이의 1.8배라는 것이며 글자의 맨위에서 부터 길이를 잰다. */
+#posts > article > p  {
+    border:solid 0px green;
+    line-height: 150%; /* 줄간격 180% 설정 */
+    margin: 0 0 3% 0;
+    font-size: 14pt;
+}
+
+
+section#sidebar > nav > ul > li:nth-child(1){ /*li의 첫번째 자식을 지칭 first-child 도 같음*/
+    border: solid 0px red;
+}
+section#sidebar > nav > ul > li:last-child{/*막내 자식 지칭 last-child 도 있다.*/
+    border: solid 0px blue;
+}
+section#sidebar > nav > ul > li:nth-child(5) > ul > li:nth-child(2) {/*5번째 자식 안의 ul 안의 li안의 2번째자식*/
+    border: solid 0px green;
+}
+#sidebar {
+    border: solid 2px black;
+    border-left: solid 2px black;
+
+    position: fixed;
+    /* 오른쪽으로 가게 */
+    right: 0;
+}

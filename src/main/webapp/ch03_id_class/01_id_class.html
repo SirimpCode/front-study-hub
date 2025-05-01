@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>id 와 class에 대해서 알아봅니다.</title>
+    <style type="text/css">
+      /* 주석문 */
+      /*css의 우선순위 
+        id > class > 태그 순으로 좁은범위가 높은 우선순위를 갖는다.*/
+      div {
+        border: solid 1px gray;
+        width: 70%;
+        margin: 3% auto;
+        height: 100px;
+        background-color: red;
+        font-size: 20pt;
+      }
+      #div2 {
+        background-color: yellow;
+        font-style: italic;
+      }
+      .myclass {
+        background-color: #ff8080;
+        color: white;
+      }
+      .mycenter {
+        text-align: center;
+      }
+
+      #div2 > span {
+        /* id가 div2인 div의 자식 span 태그에 대한 스타일 지금은 꺽쇠가 없어도 된다. 꺽쇠가 자식을 지칭하는듯*/
+        color: blue;
+      }
+      span{
+        font-size: 30pt;
+      }
+
+
+      div#six{/*앞에다 div를 박아서 div인데 아이디가 six인애를 지칭하게됨됨*/
+        background-color: navy;
+        color: white;
+        height: 200px;
+      }
+
+      div#six > span {
+        /*안에 안에 있는 태그 (손자) 는 꺽쇠가 있으면 포함이 되지않게됨됨
+        컬러는 상속 가능한 속성이기때문에 손자까지 적용이된다.
+ color: inherit; 이걸 자식한테 먹이면 부모꺼 상속안받게 가능*/
+        color: yellow;
+        font-size: 10pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div>div 태그만 있습니다.</div>
+    <div id="div2" class="myclass">
+      <span>div 태그에 class 및 id 속성이 있습니다.</span>
+    </div>
+    <div class="myclass">
+      <span>div 태그에 class 속성이 있습니다.</span>
+    </div>
+    <div class="myclass mycenter">
+      <!-- class 두개 적용 시킬수있음. -->
+      div 태그에 class 속성이 잇습니다.
+    </div>
+    <div class="mycenter">div 태그에 class 속성이 잇습니다.</div>
+
+    <div id="six">
+      <span>
+        첫번째 스팬태그<br />
+        <span>첫번째 스팬태그 속의 스팬태그</span>
+      </span>
+      <span>두번째 스팬태그</span>
+      <span>세번째 스팬태그</span>
+    </div>
+    <p id = "six">
+        여기는 문단태그인 p태그 임다.
+    </p>
+  </body>
+</html>
