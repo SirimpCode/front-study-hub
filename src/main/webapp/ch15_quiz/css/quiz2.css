@@ -1,0 +1,81 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #cacaca;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+#loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#loginForm > div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 70%;
+}
+#loginForm > label{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+header{
+}
+header > img {
+    width: 200px;
+    height: auto;
+}
+#rightMain{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 80%;
+}
+#leftSide{
+    min-width: 250px; /* 최소 너비 고정 */
+    flex-shrink: 0; /* 줄어들지 않도록 설정 */
+}
+section{
+    width: auto;
+
+    margin-left: 45px;
+    padding-top: 9px;
+    padding-left: 26px;
+    max-height: 420px;
+    background-color: #333333;
+    overflow : auto;
+
+    color: #f4efba;
+}
+
+ul {
+    list-style: none;
+    /*padding-left: 20px;*/
+    font-size: 20px;
+    background-color: #989898;
+    color: white;
+    padding: 20px 0 150px 30px;
+    font-weight: bold;
+}
+ul > li {
+    margin-bottom:15px;
+}
+ul > li > a:link,
+ul > li > a:visited,
+ul > li > a:active {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,55 @@
+#container {
+    border: solid 1px #000;
+    width: 60%;
+    margin: 5% auto;
+    /* padding: 2%; */
+}
+#container > table {
+    border: solid 1px #fcd558;
+    width: 100%;/* 테이블 태그는 width를 설정하지 않으면 그 기본 width 크기는 내용물 만큼 잡힌다. */
+    border-collapse: collapse; /* 테이블의 경계선을 겹치게 한다. */
+}
+
+#container > table th,
+#container > table td {
+    border: solid 1px #fcd558;
+}
+#container > table th{
+    background-color: #ccc;
+    height: 40px;
+}
+#container > table td{
+    height: 30px;
+}
+#container > table td:nth-child(2){
+    text-align: right;
+}
+#container > table td:not(:nth-child(2)){
+    /*border: solid 1px black;*/
+    /*text-align: center;*/
+}
+/*#container > table tr:first-child > td:nth-child(2){*/
+/*    text-align: left;*/
+/*}*/
+/*#container > table tr:nth-child(2) > td:nth-child(2){*/
+/*    text-align: center;*/
+/*}*/
+.my-text-align-center {
+    text-align: center;
+}
+.my-text-align-right {
+    text-align: right;
+}
+.my-vertical-align-bottom {
+    vertical-align: bottom;
+}
+.my-vertical-align-top {
+    vertical-align: top;
+/*    vertical-align 의 기본값은 middle 이다.*/
+/*    vertical-align 은 table 에만 사용가능하다.*/
+}
+
+#container > table > tbody > tr:nth-child(4),
+#container > table > tbody > tr:last-child{
+    height: 100px;
+}

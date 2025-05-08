@@ -1,0 +1,21 @@
+#container {
+    /*border: solid 1px red;*/
+    width: 70%;
+    margin: 5% auto;
+    text-align: center;
+/*  text-align 으로  이미지도 가운데로 옮겨졋음*/
+}
+
+#container > div {
+    /*border: solid 1px blue;*/
+    margin-top: 7%;
+}
+
+#container > div:nth-child(3) {
+    background-color:  #ffffe6;
+}
+#container > div:nth-child(3) > img {
+    width: 225px;
+    height: 175px;
+}
+

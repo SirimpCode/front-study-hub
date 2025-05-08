@@ -1,0 +1,31 @@
+body{
+    border: solid 1px gray;
+    width:90%;
+    height:80%;
+    margin:  auto;
+}
+
+div.div_flex {
+    display: flex;
+    border: solid 2px red;
+    align-items: end;
+}
+div.screen {
+    border: solid 6px green;
+    /*width: 10%;*/
+}
+div#first_shark {
+    width: 30%; /*고정값*/
+}
+div#second_shark {
+    min-width: 30%; /*최소가 30% 이고 내용물의 크기가 30% 보다 크거나 다른요소가 밀어낸다면 자동적으로 width  크기가 조절된다. */
+}
+div.div_flex > div:nth-child(2){
+    border: solid 4px orange;
+}
+
+div#third_shark {
+    max-width: 30%;/*초기 값은 내용물의 크기 만큼 잡혔다가 그 속에 들어오는 내용물의 크기만큼 width의 크기는 증가하다가 30%보다 더 커지면 최대 크기는 더이상 증가하지 않고 30%가 최대값임*/
+    overflow: auto; /*max width 크기보다 더 커져버리면 자동적으로 수평스크롤바를 생성해라는 말이다.*/
+
+}

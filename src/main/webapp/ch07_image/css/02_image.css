@@ -1,0 +1,115 @@
+#container {
+    border: solid 1px green;
+    width: 90%;
+    margin: 2% auto;
+    /*text-align: center;*/
+/*  text-align 으로  이미지도 가운데로 옮겨졋음*/
+}
+#container > h1 {
+    border: solid 1px blue;
+    padding-bottom: 3%;
+    text-align: center;
+}
+#container > div {
+    /*border: solid 1px blue;*/
+    /*margin-top: 7%;*/
+}
+
+#container > div:nth-child(3) {
+    background-color:  #ffffe6;
+}
+
+#firstDiv > div > img {
+    /*transform: scale(0.3); !*원래이미지의 0.3배*!*/
+
+    width: 225px;
+    height: 175px;
+    transition: transform 1s;
+}
+#firstDiv {
+    border: solid 1px red;
+    width: 90%;
+
+}
+#firstDiv > div:last-child{
+    border: solid 1px red;
+    clear: both;
+}
+#secondDiv > img:hover{
+    rotate: -90deg;
+    transition: transform 1s;
+
+}
+/*#firstDiv >div:nth-child(1){*/
+/*    border: solid 1px darkslategray;*/
+/*    width: 50%;*/
+/*    float: left;*/
+/*}*/
+#firstDiv >div:nth-child(2){
+    border: solid 1px black;
+    width: 40%;
+    float: right;
+}
+#firstDiv >div:nth-child(3){
+    border: solid 1px red;
+    width: 40%;
+    float: left;
+}
+
+#container > div#secondDiv {
+    border: solid 1px blue;
+    /*clear: both;*/
+}
+#secondDiv > div:first-child{
+    float: left;
+}
+#secondDiv > div:last-child{
+    float: right;
+}
+div.title {
+    text-align: center;
+}
+#thirdDiv > div {
+}
+#thirdDiv {
+    clear: both;
+    background-color: yellow;
+    border: solid 1px blue;
+    width: 90%;
+    margin: 0 auto;
+    /*display: flex;*/
+}
+#thirdDiv > div:first-child > img {
+    /*이미지 가운데로 이동*/
+    display: block;
+    margin : 0 auto;
+}
+#fourthDiv {
+    margin-bottom: 12%;
+    border: solid 1px blue;
+    /*flex-direction: column;*/
+
+}
+#fourthDiv > div:first-child {
+    /*border: solid 1px blue;*/
+    background-color: pink;
+    float: left;
+    width: 33.33%;
+}
+#fourthDiv > div:nth-child(2) {
+    /*border: solid 1px green;*/
+    background-color: yellow;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+#fourthDiv > div:nth-child(3) {
+    background-color: darkgreen;
+    float: right;
+    width: 33.33%;
+    text-align: right;
+}
+#fourthDiv > div > img {
+    /*display: block;*/
+}
+

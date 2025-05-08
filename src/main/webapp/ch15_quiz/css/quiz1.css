@@ -1,0 +1,103 @@
+header {
+
+    border-bottom: 3px solid #001278;
+}
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+header > div > ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    min-width: 300px; /*최소 너비 설정*/
+    list-style: none;
+    padding-left: 0;
+    flex-wrap: nowrap; /* 줄바꿈 방지 */
+}
+body > header > div > div > input[type=text]:nth-child(1){
+    height: 20px;
+}
+body > header > div > div > input[type=button]:nth-child(2){
+    margin-left : 15px;
+}
+body > header > div > div {
+    min-width: auto;
+    flex-shrink: 0;
+}
+body > main > section > aside > p {
+    /*border: solid 0px gray;*/
+    float: right;
+    width: 35%;
+    font-size: 18pt;
+    color: #b30059;
+    line-height: 180%;/*줄간격 100% 하면 글자크기만큼만 벌어지고 줄간격이 엄슴 200퍼 하면 글자크기만큼 벌어짐 180% = 1.8 과 같은것이다.*/
+    padding-left:  1%;
+    text-align: left;
+    margin-top: -1%;
+    margin-bottom: 0;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer > p {
+    margin-bottom: 5px;
+}
+footer > ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    padding-left: 0;
+    width: 60%;
+    min-width: 500px; /*최소 너비 설정*/
+    flex-wrap: nowrap; /* 줄바꿈 방지 */
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px 0;
+
+}
+main > section {
+    width: 70%;
+    max-height: 420px;
+    border: 2px solid #b1b1b1;
+    overflow : auto;
+    border-radius: 8px;
+}
+main > nav {
+    width: 20%;
+    border: 2px solid #b1b1b1;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    flex-shrink: 0;
+}
+main > nav > h2 {
+    font-size: 20px;
+    margin-left: -40px;
+    margin-bottom: 0;
+}
+main > nav > ul {
+    list-style: none;
+    padding-left: 0;
+
+}
+main > nav > ul > li {
+    margin-bottom: 10px;
+}
+main > nav > ul > li > ul > li {
+    margin-top : 3px;
+    font-size: 11pt;
+}

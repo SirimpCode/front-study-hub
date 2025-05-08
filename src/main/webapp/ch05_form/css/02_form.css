@@ -1,0 +1,82 @@
+#container {
+    border: solid 1px #000;
+    width: 80%;
+    margin: 3% auto 5% auto;
+    padding: 2%;
+}
+legend {
+    /* border: solid 1px red; */
+    background-color: navy;
+    color: white;
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 0 3%;
+    padding: 0.2% 1%;
+}
+fieldset > ul {
+    /* border: solid 1px #000; */
+    list-style: none;
+    padding-left: 10px;   
+}
+fieldset > ul > li {
+    /* border: solid 1px #000; */
+    line-height: 2.5;
+}
+li > label.title {
+    display: inline-block;
+    width: 20%;
+    color: navy;
+    font-size: 12pt;
+    font-weight: bold;
+    border: solid 1px orange;
+}
+li:last-child > input {
+    border: none;
+    width: 80px;
+    height: 50px;
+    color: white;
+    margin: 30px 20px 0 0;
+    padding: 3px;
+    /* background-color: ghostwhite; */
+}
+
+li:last-child > input[type="submit"] {
+    background-color: navy;
+}
+li:last-child > input[type="reset"] {
+    background-color: red;
+}
+
+li:last-child > input:hover{
+    cursor: pointer;
+}
+/*  */
+
+label[for="female"] {
+    /* border: solid 1px #000; */
+    margin-left: 5%;
+}
+input[type="checkbox"]{
+    /* border: solid 1px #000; */
+    margin-right: 3%;
+}
+/* id가 food가 아닌 select 잡기 */
+li > select:not(#food) {
+    width: 20%;
+    height: 30px;
+}
+select option {
+    font-size: 13pt;
+}
+select > option {
+    color: red;
+}
+
+label[for="registerComment"] {
+    position: relative;
+    top: -50px;
+}
+ul > li:nth-child(9) > label {
+    position: relative;
+    top: -65px;
+}
